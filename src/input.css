@@ -1,0 +1,145 @@
+/*
+ * File CSS Input Utama
+ * --------------------
+ * Gunakan @layer untuk mengorganisir CSS Anda ke dalam "bucket"
+ * yang logis. Tailwind akan secara otomatis menempatkan @layer ini
+ * dalam urutan yang benar (base, components, utilities) di file output.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * LAYER: BASE
+ * --------------------
+ * Gaya dasar global, reset, dan default untuk elemen HTML murni.
+ * Termasuk pengaturan font-family dasar.
+ */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-base-200 font-sans text-base-content antialiased dark:bg-dark-base-200 dark:text-dark-base-content;
+  }
+  
+  /* Atur font serif untuk heading */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+
+  /* Kustomisasi scrollbar (opsional, tapi bagus untuk estetika) */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-base-200 dark:bg-dark-base-200;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-primary/50 dark:bg-dark-primary/50;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/70 dark:bg-dark-primary/70;
+  }
+}
+
+/*
+ * LAYER: COMPONENTS
+ * --------------------
+ * Kelas komponen kustom yang dapat Anda gunakan kembali di seluruh proyek.
+ * Contoh: .btn, .card, .alert, .modal, dll.
+ */
+@layer components {
+  /* Tombol (Button) */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg px-5 py-3 font-semibold shadow-md transition-all duration-300 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply border border-transparent bg-primary text-white hover:bg-primary-dark focus-visible:ring-primary;
+  }
+  .btn-danger {
+    @apply border border-transparent bg-danger text-white hover:bg-danger-dark focus-visible:ring-danger;
+  }
+  .btn-outline {
+    @apply border-primary bg-transparent text-primary hover:bg-primary/10 dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary/10;
+  }
+  .btn-ghost {
+    @apply border-transparent bg-transparent text-primary shadow-none hover:bg-primary/10 dark:text-dark-primary dark:hover:bg-dark-primary/10;
+  }
+
+  /* Card */
+  .card {
+    @apply overflow-hidden rounded-xl bg-base-100 shadow-lg dark:bg-dark-base-100;
+  }
+  .card-body {
+    @apply p-6;
+  }
+  .card-title {
+    @apply mb-3 text-2xl font-bold text-primary dark:text-dark-primary;
+  }
+
+  /* Modal */
+  .modal-backdrop {
+    @apply fixed inset-0 z-40 bg-black/60 backdrop-blur-sm;
+  }
+  .modal-box {
+    @apply fixed left-1/2 top-1/2 z-50 w-11/12 max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-xl bg-base-100 p-6 shadow-2xl dark:bg-dark-base-100;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold;
+  }
+  .badge-primary {
+    @apply bg-primary/20 text-primary-dark dark:bg-dark-primary/20 dark:text-dark-primary;
+  }
+  .badge-accent {
+    @apply bg-accent/20 text-accent-dark dark:bg-accent/20 dark:text-accent;
+  }
+  
+  /* Alert */
+  .alert {
+    @apply flex items-center gap-3 rounded-lg p-4;
+  }
+  .alert-info {
+    @apply bg-secondary text-accent dark:bg-secondary/80 dark:text-accent-dark;
+  }
+
+  /* * Kustomisasi Form Menggunakan @tailwindcss/forms
+   * Kita override beberapa gaya default dari plugin untuk mencocokkan desain.
+   */
+  .form-input,
+  .form-textarea,
+  .form-select,
+  .form-multiselect {
+    @apply rounded-lg border-base-300 bg-base-100 shadow-sm transition duration-300 ease-in-out;
+    @apply focus:border-primary focus:ring-primary/50 dark:border-dark-base-300 dark:bg-dark-base-100 dark:focus:border-dark-primary dark:focus:ring-dark-primary/50;
+  }
+
+  .form-checkbox,
+  .form-radio {
+    @apply rounded-md border-base-300 text-primary shadow-sm;
+    @apply focus:ring-primary/50 focus:ring-offset-0 dark:border-dark-base-300 dark:text-dark-primary dark:focus:ring-dark-primary/50;
+  }
+
+  .form-label {
+    @apply mb-2 block text-sm font-medium text-neutral dark:text-dark-base-content;
+  }
+}
+
+/*
+ * LAYER: UTILITIES
+ * --------------------
+ * Kelas utilitas kustom. Seringkali tidak diperlukan jika Anda
+ * memaksimalkan theme.extend di config Anda, tetapi berguna
+ * untuk kasus-kasus khusus.
+ */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+  }
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+  }
+}
