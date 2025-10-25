@@ -44,7 +44,7 @@
   class="bg-base-200 font-sans text-base-content antialiased dark:bg-dark-base-200 dark:text-dark-base-content"
 >
     <!-- ===== HEADER & NAVIGASI ===== -->
-    <header class="sticky top-0 z-30 w-full bg-secondary/95 text-white shadow-lg backdrop-blur-sm dark:bg-secondary/90">
+    <header class="sticky top-0 z-30 w-full bg-secondary/95 text-white shadow-lg backdrop-blur-xs dark:bg-secondary/90">
         <nav class="container mx-auto flex max-w-7xl items-center justify-between p-4">
             <!-- Logo dan Judul -->
             <a href="#" class="flex items-center gap-3">
@@ -84,10 +84,10 @@
                 <a href="#mekanisme" class="px-3 py-2 text-sm font-medium transition-colors hover:text-accent">Mekanisme</a>
                 
                 <!-- Tombol Register -->
-                <button @click="isModalOpen = true" class="btn btn-danger ml-2 !py-2 !px-4 text-sm shadow-red-500/50">REGISTER NOW</button>
+                <button @click="isModalOpen = true" class="btn btn-danger ml-2 py-2! px-4! text-sm shadow-red-500/50">REGISTER NOW</button>
                 
                 <!-- Toggle Dark Mode -->
-                <button @click="toggleDarkMode()" class="btn btn-ghost !rounded-full !p-2" aria-label="Toggle Dark Mode">
+                <button @click="toggleDarkMode()" class="btn btn-ghost rounded-full! p-2!" aria-label="Toggle Dark Mode">
                     <svg x-show="!darkMode" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/></svg>
                     <svg x-show="darkMode" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
@@ -95,11 +95,11 @@
             
             <!-- Tombol Hamburger (Mobile) -->
             <div class="flex items-center gap-2 md:hidden">
-                <button @click="toggleDarkMode()" class="btn btn-ghost !rounded-full !p-2" aria-label="Toggle Dark Mode">
+                <button @click="toggleDarkMode()" class="btn btn-ghost rounded-full! p-2!" aria-label="Toggle Dark Mode">
                     <svg x-show="!darkMode" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/></svg>
                     <svg x-show="darkMode" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
-                <button @click="isMobileMenuOpen = !isMobileMenuOpen" class="btn btn-ghost !rounded-full !p-2" aria-label="Toggle Menu">
+                <button @click="isMobileMenuOpen = !isMobileMenuOpen" class="btn btn-ghost rounded-full! p-2!" aria-label="Toggle Menu">
                     <svg x-show="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
                     <svg x-show="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
                 </button>
@@ -241,7 +241,7 @@
 
         <!-- Info Banner -->
         <section class="alert alert-info mt-16 rounded-xl">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 flex-shrink-0 text-accent"><path d="m12 14 4-4H8l4 4Z"/><path d="m12 20 4-4H8l4 4Z"/><path d="m12 8 4-4H8l4 4Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 shrink-0 text-accent"><path d="m12 14 4-4H8l4 4Z"/><path d="m12 20 4-4H8l4 4Z"/><path d="m12 8 4-4H8l4 4Z"/></svg>
             <p class="text-lg font-semibold text-accent">
                 KUOTA TERBATAS! SMP ISLAM FULL DAY (15), SMA ISLAM FULL DAY (20), SMA BOARDING SCHOOL (20)
             </p>
@@ -341,61 +341,61 @@
                     
                     <!-- Daftar Persyaratan -->
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">FORMULIR PENDAFTARAN (Online/Offline)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">AKTA KELAHIRAN (Scan/Fotokopi)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">KARTU KELUARGA (Scan/Fotokopi)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">KTP ORANG TUA / WALI MURID (Scan/Fotokopi)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">SKHUN / IJAZAH (Khusus SMP/SMA)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">RAPOR SEMESTER TERAKHIR (Mutasi)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">SURAT KETERANGAN PINDAH (Mutasi)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">SURAT KETERANGAN KESEHATAN</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">PAS FOTO 3x4 (Background Merah)</span>
                     </div>
                     <div class="flex items-center gap-3">
-                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                         </div>
                         <span class="font-medium text-neutral dark:text-neutral-dark">MEMBAYAR BIAYA PENDAFTARAN</span>
@@ -420,7 +420,7 @@
             <div class="mt-12 space-y-10">
                 <!-- Step 1 -->
                 <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                    <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                         <span class="font-serif text-5xl font-bold">1.</span>
                     </div>
                     <div class="card flex-1">
@@ -433,7 +433,7 @@
                                     <strong class="text-secondary dark:text-primary-light">Bank Syariah Indonesia (BSI) 123456789 a/n Yayasan MBU</strong>
                                 </p>
                             </div>
-                            <div class="mt-4 md:mt-0 flex-shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                            <div class="mt-4 md:mt-0 shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
                             </div>
                         </div>
@@ -442,7 +442,7 @@
 
                 <!-- Step 2 -->
                 <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                    <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                         <span class="font-serif text-5xl font-bold">2.</span>
                     </div>
                     <div class="card flex-1">
@@ -455,7 +455,7 @@
                                     Siapkan bukti transfer, scan Akta, KK, dan dokumen pendukung lainnya.
                                 </p>
                             </div>
-                            <div class="mt-4 md:mt-0 flex-shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                            <div class="mt-4 md:mt-0 shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/><path d="m15 5 4 4"/></svg>
                             </div>
                         </div>
@@ -466,7 +466,7 @@
                 
                 <!-- Step 3 (Contoh) -->
                 <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                    <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                         <span class="font-serif text-5xl font-bold">3.</span>
                     </div>
                     <div class="card flex-1">
@@ -477,7 +477,7 @@
                                     Panitia akan menghubungi Anda melalui WhatsApp (WA) untuk menjadwalkan observasi (SD) atau tes seleksi (SMP/SMA).
                                 </p>
                             </div>
-                            <div class="mt-4 md:mt-0 flex-shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                            <div class="mt-4 md:mt-0 shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                         </div>
@@ -486,7 +486,7 @@
 
                 <!-- Step 6 (Contoh Terakhir) -->
                 <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    <div class="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                    <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                         <span class="font-serif text-5xl font-bold">6.</span>
                     </div>
                     <div class="card flex-1">
@@ -497,7 +497,7 @@
                                     Hasil seleksi akan diumumkan melalui website dan WA. Calon murid yang lolos harap melakukan registrasi ulang sesuai jadwal.
                                 </p>
                             </div>
-                            <div class="mt-4 md:mt-0 flex-shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
+                            <div class="mt-4 md:mt-0 shrink-0 flex h-20 w-20 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-dark-primary/10 dark:text-dark-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M22 19h-3m0 0h-3m3 0v-3m0 3v3"/></svg>
                             </div>
                         </div>
@@ -577,7 +577,7 @@
                             <h3 class="text-2xl font-bold font-serif text-primary dark:text-dark-primary">Formulir Pendaftaran</h3>
                             <p class="mt-1 text-sm text-neutral dark:text-neutral-dark">Isi data berikut untuk memulai pendaftaran.</p>
                         </div>
-                        <button @click="isModalOpen = false" class="btn btn-ghost !rounded-full !p-2 text-neutral/50 hover:bg-base-200 hover:text-neutral dark:hover:bg-dark-base-300">
+                        <button @click="isModalOpen = false" class="btn btn-ghost rounded-full! p-2! text-neutral/50 hover:bg-base-200 hover:text-neutral dark:hover:bg-dark-base-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
                         </button>
                     </div>
